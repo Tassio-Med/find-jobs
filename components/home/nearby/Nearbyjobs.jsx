@@ -1,22 +1,7 @@
-// import React from 'react'
-// import { View, Text } from 'react-native'
-
-// import styles from './nearbyjobcard.style'
-
-// const NearbyJobCard = () => {
-//   return (
-//     <View>
-//       <Text>NearbyJobCard</Text>
-//     </View>
-//   )
-// }
-
-// export default NearbyJobCard
-
 import { View, Text, TouchableOpacity, ActivityIndicator } from 'react-native'
 import { useRouter } from 'expo-router'
 
-import styles from './nearbyjobcard.style'
+import styles from './nearbyjobs.style'
 import { COLORS } from '../../../constants'
 import NearbyJobCard from '../../common/cards/nearby/NearbyJobCard';
 import useFetch from '../../../hook/useFetch';
@@ -46,7 +31,7 @@ const NearbyJobs = () => {
           data?.map((job) => (
             <NearbyJobCard
               job={job}
-              key={`nearby-job-${job?.job_id}`}
+              key={`nearby-job-${job.job_id}`}
               handleNavigate={() => router.push(`/job-details/${job.job_id}`)}
             />
           ))

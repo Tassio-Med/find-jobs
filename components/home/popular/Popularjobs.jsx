@@ -37,7 +37,7 @@ const Popularjobs = () => {
                 item={item}
               />
             )}
-            keyExtractor={item => item?.job_id}
+            keyExtractor={(item) => item.job_id}
             contentContainerStyle={{ columnGap: SIZES.medium }}
             horizontal
           />
